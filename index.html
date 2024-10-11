@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kill Zombies</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="game-panel">
-        <div>
-            <button id="sound-btn">SOUND ON</button>
-            <button id="start-btn">START GAME</button>
+      <div>
+        <button id="sound-btn">SOUND ON</button>
+        <button id="start-btn">START GAME</button>
+      </div>
+      <div>
+        <div class="counter">
+          HITS:
+          <span id="hit-counter">0</span>
         </div>
-        <div>
-            <div class="counter">HITS:
-                <span id="hit-counter">0</span>
-            </div>
-            <div class="counter">MISS:
-                <span id="miss-counter">0</span>
-            </div>
+        <div class="counter">
+          MISS:
+          <span id="miss-counter">0</span>
         </div>
+      </div>
     </div>
 
     <div class="container">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+      <!-- 15 элементов div, которые будут размещены по всей площади игрового экрана,
+      для рандомного местопоявления зомби на экране -->
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
     </div>
+
     <audio class="sound-bu" src="./assets/sounds/bu.mp3"></audio>
     <audio class="sound-shot" src="./assets/sounds/shot.mp3"></audio>
-</body>
+  </body>
 </html>
