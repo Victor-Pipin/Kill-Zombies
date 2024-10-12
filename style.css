@@ -1,0 +1,17 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(53, 2, 2, 0.981);
+    padding: 1.875rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    width: 8.4375rem;
+    padding: 0.625rem 1.5625rem;
+    background-color: rgba(53, 2, 2, 0.981);
+    border: 0.125rem solid white;
+    border-radius: 0.3125rem;
+    color: white;
+}
