@@ -15,3 +15,11 @@ button {
     border-radius: 0.3125rem;
     color: white;
 }
+
+.game-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    color: white;
+}
