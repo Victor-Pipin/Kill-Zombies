@@ -23,3 +23,17 @@ button {
     padding: 1.25rem;
     color: white;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 26.5rem;
+    width: 50rem;
+    border-radius: 0.625rem;
+    margin: 3.125rem auto;
+    background-image: url("assets/images/img/wall.jpg");
+    background-size: 100%;
+    background-position-y: -15.9375rem;
+    box-shadow: 0 0 3.125rem 1.875rem rgba(0, 0, 0, 0.5);
+    cursor: url(assets/images/svg/aim.svg) pointer;
+}
