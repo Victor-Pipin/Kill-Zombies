@@ -35,5 +35,12 @@ button {
     background-size: 100%;
     background-position-y: -15.9375rem;
     box-shadow: 0 0 3.125rem 1.875rem rgba(0, 0, 0, 0.5);
-    cursor: url(assets/images/svg/aim.svg) pointer;
+    cursor: url(assets/images/svg/aim.svg), pointer;
+}
+
+.item {
+    box-sizing: border-box;
+    width: 7.5rem;
+    aspect-ratio: 1;
+    margin: 0.625rem 1.25rem;
 }
