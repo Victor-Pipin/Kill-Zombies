@@ -9,5 +9,9 @@ const items = document.querySelectorAll('.item')
 // Преобразовываю эту коллекцию в массив
 const itemsArray = Array.from(items)
 
-// Счётчик количества промахов
+// Счётчик количества промахов из DOM
 const missCounter = document.getElementById('miss-counter')
+
+// Создаю элемент img (зомби-картинку в DOM нет)
+const zombieImg = document.createElement('img')
+zombieImg.src = "assets/images/img/zombie.png"
