@@ -9,9 +9,13 @@ const items = document.querySelectorAll('.item')
 // Преобразовываю эту коллекцию в массив
 const itemsArray = Array.from(items)
 
-// Счётчик количества промахов из DOM
+// Получаю из DOM счётчик количества промахов
 const missCounter = document.getElementById('miss-counter')
 
-// Создаю элемент img (зомби-картинку в DOM нет)
+// Создаю элемент img (зомби-картинку, в DOM этого элемента нет)
 const zombieImg = document.createElement('img')
 zombieImg.src = "assets/images/img/zombie.png"
+
+// Получаю из DOM 2 mp3 файла
+const soundBu = document.getElementById('sound-bu')
+const soundShot = document.getElementById('sound-shot')
