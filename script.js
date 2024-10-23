@@ -19,3 +19,7 @@ zombieImg.src = "assets/images/img/zombie.png"
 // Получаю из DOM 2 mp3 файла
 const soundBu = document.getElementById('sound-bu')
 const soundShot = document.getElementById('sound-shot')
+
+// Получаю из DOM 2 кнопки: кнопку фонового звука и кнопку старта
+const soundBtn = document.getElementById('sound-btn')
+const startBtn = document.getElementById('start-btn')
