@@ -15,6 +15,9 @@ const missCounter = document.getElementById('miss-counter')
 // Создаю элемент img (зомби-картинку, в DOM этого элемента нет)
 const zombieImg = document.createElement('img')
 zombieImg.src = "assets/images/img/zombie.png"
+// Создаю элемент img (кровь-картинка на месте убитого зомби, в DOM этого элемента нет)
+const hitImg = document.createElement('img')
+hitImg.src = "assets/images/img/blood.png"
 
 // Получаю из DOM 2 mp3 файла
 const soundBu = document.getElementById('sound-bu')
