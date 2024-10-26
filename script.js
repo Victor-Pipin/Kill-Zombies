@@ -17,7 +17,6 @@ const startBtn = document.getElementById('start-btn')
 const missCounter = document.getElementById('miss-counter')
 // Получаю из DOM счётчик количества попаданий в цель(зомби)
 const hitCounter = document.getElementById('hit-counter')
-console.log(hitCounter)
 
 // Получаю из DOM 2 mp3 файла
 const soundBu = document.getElementById('sound-bu')
