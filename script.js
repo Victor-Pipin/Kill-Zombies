@@ -1,3 +1,7 @@
+
+// Флаг для отслеживания состояния игры (игра запущена(true) или нет(false))
+let isGameStarted = false
+
 // Генерирует случайный index переданного массива
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
