@@ -1,6 +1,9 @@
 
 // Флаг для отслеживания состояния игры (игра запущена(true) или нет(false))
 let isGameStarted = false
+// Флаг указывающий было попадание в зомби(true) или не было попадания(false)
+let zombieHit = true
+
 
 // Генерирует случайный index переданного массива
 function getRandomIndex(array) {
