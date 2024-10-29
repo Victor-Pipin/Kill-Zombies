@@ -1,4 +1,8 @@
 
+// Переменная которая будет содержать случайный индекс массива
+// (возвращаемое функцией getRandomIndex(array) значение)
+let randomIndex
+
 // Флаг для отслеживания состояния игры (игра запущена(true) или нет(false))
 let isGameStarted = false
 // Флаг указывающий было попадание в зомби(true) или не было попадания(false)
@@ -28,6 +32,7 @@ const hitCounter = document.getElementById('hit-counter')
 // Получаю из DOM 2 mp3 файла
 const soundBu = document.getElementById('sound-bu')
 const soundShot = document.getElementById('sound-shot')
+console.log(soundShot)
 
 // Создаю элемент img (зомби-картинку, в DOM этого элемента нет)
 const zombieImg = document.createElement('img')
