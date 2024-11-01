@@ -43,3 +43,19 @@ zombieImg.src = "assets/images/img/zombie.png"
 // Создаю элемент img (кровь-картинка на месте убитого зомби, в DOM этого элемента нет)
 const hitImg = document.createElement('img')
 hitImg.src = "assets/images/img/blood.png"
+
+// (хендлер) Управляет запуском и остановкой фоновой музыки в игре при нажатии звуковой кнопки
+function handleToggleBackgroundMusic() {
+    if (soundBu.currentTime) { // Проверка играет ли музыка, если играет:
+        soundBu.pause() // При клике на кнопку музыка останавливается
+        soundBu.currentTime = 0 // Возвращется к началу воспроизвидения
+        soundBtn.innerHTML= 'SOUND ON' // Замена текста кнопки
+        
+    } else { // Если музыка не играла при клике на кнопку:
+        soundBu.play() // музыка запускается
+        soundBtn.innerHTML = 'SOUND OFF' // Замена текста кнопки
+    }
+}
+
+// Обработка клика по музыкальной кнопке
+soundBtn.addEventListener('click', handleToggleBackgroundMusic)
