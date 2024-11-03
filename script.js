@@ -59,3 +59,5 @@ function handleToggleBackgroundMusic() {
 
 // Обработка клика по музыкальной кнопке
 soundBtn.addEventListener('click', handleToggleBackgroundMusic)
+
+function playGame() {}
