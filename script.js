@@ -60,4 +60,19 @@ function handleToggleBackgroundMusic() {
 // Обработка клика по музыкальной кнопке
 soundBtn.addEventListener('click', handleToggleBackgroundMusic)
 
-function playGame() {}
+ 
+function playGame() {
+    randomIndex = getRandomIndex(itemsArray)
+    itemsArray[randomIndex].append(zombieImg)
+
+    interval = setInterval(function () {
+        if (hit) {
+            hit = false
+        } else {
+            missCounter.innerText++
+        }
+        randomIndex = getRandomIndex(items)
+        itemsArray[randomIndex].append(zombieImg)
+        hitImg.remove()
+    }, 3000)
+    }
