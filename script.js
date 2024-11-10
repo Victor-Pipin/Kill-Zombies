@@ -60,19 +60,31 @@ function handleToggleBackgroundMusic() {
 // Обработка клика по музыкальной кнопке
 soundBtn.addEventListener('click', handleToggleBackgroundMusic)
 
- 
-function playGame() {
-    randomIndex = getRandomIndex(itemsArray)
-    itemsArray[randomIndex].append(zombieImg)
 
+// Управляет проверкой попадания в зомби и размещением зомби в рандомной части игрового экрана, каждые 3 секунды
+function playGame() {
+    // Определение рандомного места на экране для появления зомби
+    // itemsArray - массив из 15 элементов 'div' равномерно расположенных по всему экрану
+    // getRandomIndex() - функция определяющая случайный индекс массива с элементами div
+    randomIndex = getRandomIndex(itemsArray)
+    itemsArray[randomIndex].append(zombieImg) // Добавляю картинку в это рандомное место на игровом экране
+
+    // Каждые 3 секунды проверяет было ли попадание в зомби, затем отрисовывает зомби в другом месте экрана
     interval = setInterval(function () {
-        if (hit) {
-            hit = false
-        } else {
-            missCounter.innerText++
+        if (hit) {  // Если в течении 3 секунд hit стал true
+            hitCounter.innerText++  // Счётчик попаданий увеличивается на 1
+            hit = false // Флаг попадания в зомби привожу в нейтральное состояние
+        } else {    // Если в течении 3 секунд hit не стал true
+            missCounter.innerText++ // Счётчик промахов увеличивается на 1
         }
-        randomIndex = getRandomIndex(items)
+
+        // После проверки отрисовка зомби в другом месте
+        randomIndex = getRandomIndex(itemsArray)
         itemsArray[randomIndex].append(zombieImg)
-        hitImg.remove()
+
+        // Проверка и удаление картинки-крови от предыдущего попадания
+        if (hitImg) {
+            hitImg.remove()
+        }
     }, 3000)
     }
