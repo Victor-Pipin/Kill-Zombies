@@ -44,11 +44,12 @@ zombieImg.src = "assets/images/img/zombie.png"
 const hitImg = document.createElement('img')
 hitImg.src = "assets/images/img/blood.png"
 
+
 // (хендлер) Управляет запуском и остановкой фоновой музыки в игре при нажатии звуковой кнопки
 function handleToggleBackgroundMusic() {
     if (soundBu.currentTime) { // Проверка играет ли музыка, если играет:
         soundBu.pause() // При клике на кнопку музыка останавливается
-        soundBu.currentTime = 0 // Возвращется к началу воспроизвидения
+        soundBu.currentTime = 0 // Возвращается к началу воспроизвидения
         soundBtn.innerHTML= 'SOUND ON' // Замена текста кнопки
         
     } else { // Если музыка не играла при клике на кнопку:
@@ -59,6 +60,20 @@ function handleToggleBackgroundMusic() {
 
 // Обработка клика по музыкальной кнопке
 soundBtn.addEventListener('click', handleToggleBackgroundMusic)
+
+// (хендлер) Обрабатывает попадание в зомби (звук, картинка крови вместо зомби)
+function handleZombieHit() {
+    hit = true  // Зажигает флаг о попадании в зомби
+    
+    soundShot.currentTime = 0   // Обнуляю воспроизведение
+    soundShot.play()    // Включаю звук выстрела
+
+    zombieImg.remove()  // Удаляю картинку зомби
+    itemsArray[randomIndex].append(hitImg)  // На её место добавляю картинку крови
+}
+
+// Обработка клика по зомби
+zombieImg.addEventListener('click', handleZombieHit)
 
 
 // Управляет проверкой попадания в зомби и размещением зомби в рандомной части игрового экрана, каждые 3 секунды
