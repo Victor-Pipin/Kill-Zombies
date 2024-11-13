@@ -79,6 +79,9 @@ zombieImg.addEventListener('click', handleZombieHit)
 // (хендлер) Запускает и останавливает игру
 function handleStartStopGame() {}
 
+// Обработка клика по кнопке START
+startBtn.addEventListener('click', handleStartStopGame)
+
 
 // Управляет проверкой попадания в зомби и размещением зомби в рандомной части игрового экрана, каждые 3 секунды
 function playGame() {
