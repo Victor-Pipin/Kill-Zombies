@@ -77,7 +77,21 @@ function handleZombieHit() {
 zombieImg.addEventListener('click', handleZombieHit)
 
 // (хендлер) Запускает и останавливает игру
-function handleStartStopGame() {}
+function handleStartStopGame() {
+    if (!isGameStarted) {
+        isGameStarted = true
+        playGame()
+        startBtn.innerText = 'STOP'
+    } else {
+        isGameStarted = false
+        clearInterval(interval)
+        startBtn.innerText = 'START'
+        hitCounter.innerText = 0
+        missCounter.innerText = 0
+        zombieImg.remove()
+        hitImg.remove()
+    }
+}
 
 // Обработка клика по кнопке START
 startBtn.addEventListener('click', handleStartStopGame)
