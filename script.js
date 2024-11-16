@@ -79,7 +79,7 @@ zombieImg.addEventListener('click', handleZombieHit)
 // (хендлер) Запускает и останавливает игру
 function handleStartStopGame() {
     if (!isGameStarted) {
-        isGameStarted = true
+        isGameStarted = true // Устанавливает флаг состояния игры в значение true (игра запущена)
         playGame()
         startBtn.innerText = 'STOP'
     } else {
