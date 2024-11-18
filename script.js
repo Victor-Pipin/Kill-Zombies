@@ -78,18 +78,21 @@ zombieImg.addEventListener('click', handleZombieHit)
 
 // (хендлер) Запускает и останавливает игру
 function handleStartStopGame() {
+    // В условии приводим false переменную к значению true, чтобы отработал первый блок кода
     if (!isGameStarted) {
-        isGameStarted = true // Устанавливает флаг состояния игры в значение true (игра запущена)
-        playGame()
-        startBtn.innerText = 'STOP'
+        // Устанавливает флаг состояния игры в значение true (игра запущена) при клике (глобальная переменная isGameStarted теперь - true)
+        isGameStarted = true 
+        playGame()  // Запускается игра - вызов игровой функции в момент клика
+        startBtn.innerText = 'STOP' // Замена текста кнопки START на STOP при клике
     } else {
+        // Устанавливает флаг состояния игры в значение false (игра остановлена) при клике на уже кнопку STOP
         isGameStarted = false
-        clearInterval(interval)
-        startBtn.innerText = 'START'
-        hitCounter.innerText = 0
-        missCounter.innerText = 0
-        zombieImg.remove()
-        hitImg.remove()
+        clearInterval(interval) // Останавливает функцию setInterval() в запущеной функции playGame(),  по сути тем самым останавливая игру
+        startBtn.innerText = 'START'    // Замена текста кнопки при клике
+        hitCounter.innerText = 0    // Обнуление счётчика попаданий
+        missCounter.innerText = 0   // Обнуление счётчика промахов
+        zombieImg.remove()  // Удаление картинки-зомби с игрового поля
+        hitImg.remove() // Удаление картинки-крови с игрового поля
     }
 }
 
