@@ -83,7 +83,7 @@ function handleStartStopGame() {
         // Устанавливает флаг состояния игры в значение true (игра запущена) при клике (глобальная переменная isGameStarted теперь - true)
         isGameStarted = true 
         playGame()  // Запускается игра - вызов игровой функции в момент клика
-        startBtn.innerText = 'STOP' // Замена текста кнопки при клике
+        startBtn.innerText = 'STOP' // Замена текста кнопки START на STOP при клике
     } else {
         // Устанавливает флаг состояния игры в значение false (игра остановлена) при клике на уже кнопку STOP
         isGameStarted = false
